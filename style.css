@@ -4,20 +4,18 @@
     font-family: 'poppins', sans-serif;
     box-sizing: border-box;
 }
-body{
-    background-color: #6d695c;
-background-image:
-repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
-repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
-linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
-linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
-background-size: 70px 120px;
-}
+body {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(270deg, #E1BE6A, #40B0A6 );
+    background-size: 400% 400%;
+  }
+  
 .todo{
     width: 100%;
     max-width: 540px;
     opacity: 1;
-    background-color: #f1f1eb;
+    background-color: #f1f1f1dc;
     margin: 80px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
@@ -40,7 +38,7 @@ background-size: 70px 120px;
     justify-content: space-between;
     background: white;
     border-radius: 30px;
-    padding-left: 20px;
+    padding-left: 8px;
     margin-bottom:25px;
 }
 input{
@@ -50,9 +48,78 @@ input{
     padding: 10px;
 }
 
-button{
+.button{
     border: none;
     outline: none; 
     padding: 16px 50px;
+    background: #FF5945;
+    color: antiquewhite;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
 }
+
+.button:hover{
+    background: #23ad51;
+
+}
+
+
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    background: #eee;
+    transition: 0.2s;
+
+   /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;   
+}
+
+ul li:nth-child(odd) {
+    background: #f9f9f9;
+}
+ 
+ul li:hover {
+    background: #ddd;
+}
+
+ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+  
+
+ul li.checked ::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    top: 12px;
+    left: 16px;
+
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 15px 12px 15px;
+    background-color:  #eb5247;
+    border: #002765;
+}
+
+.close:hover {
+    background-color: #ff1100;
+    color: white;
+}
+  
 
